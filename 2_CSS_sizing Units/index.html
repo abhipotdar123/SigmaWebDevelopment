@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 12px;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 100vw;
+            height: 10vh;
+            margin: auto;
+            background-color: maroon;
+            color: aliceblue;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            min-height: 80vh;
+            margin: 23px auto;
+            background-color: rgb(215, 48, 11);
+            color: aliceblue;
+            font-size: 18px;
+        }
+        .container > div{
+            font-size: 2rem;
+            width: 50%;
+            border: 2px solid rgb(6, 180, 38);
+        }
+        .container > div > div{
+            width: 50%;
+            border: 2px solid blue
+        }
+        .myContainer{
+            box-sizing: border-box;
+            margin: 23px auto;
+            background-color: yellowgreen;
+            color: brown;
+            font-size: 22px;
+            width: 80vw;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is the Main Box
+    </div>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate quo autem, quia delectus deserunt quam quis facilis nostrum at corrupti beatae quos eaque molestiae. Dolorum exercitationem magni, necessitatibus molestiae alias reprehenderit explicabo ex asperiores suscipit rerum unde voluptas saepe accusamus ullam labore incidunt. Assumenda consectetur eum quam, non inventore dignissimos earum temporibus laudantium ullam corrupti unde placeat labore sapiente harum architecto velit modi laboriosam dicta error esse rerum! Molestias quod eum architecto soluta, nobis ducimus a ipsa nisi facere porro debitis impedit ex expedita incidunt suscipit facilis tempora aliquid. Illum debitis ducimus ipsum modi blanditiis eius consequatur cumque accusamus provident quae temporibus perspiciatis distinctio hic, consectetur qui beatae animi officiis quo natus nesciunt. Debitis repellendus ex ad nisi dolor nesciunt quo aut natus adipisci?
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae atque sapiente minus voluptate vero eos necessitatibus quas laudantium assumenda, suscipit deserunt debitis fuga reprehenderit, recusandae amet voluptatum fugit rerum voluptatem! Accusantium delectus quisquam exercitationem amet cupiditate magni soluta esse nemo. Repellat quae consequatur corporis praesentium velit similique eveniet doloremque quod distinctio? Nemo odio voluptas voluptatibus et vel, illo facilis quod laudantium cupiditate! Accusantium facilis, odit ullam neque accusamus laudantium dolore omnis hic iure quas totam esse quisquam, consequatur vero inventore assumenda. Laudantium amet velit repudiandae eum quisquam ea ducimus facere ratione commodi tempora? Itaque blanditiis quod aliquid placeat molestias eum, officia fugit dignissimos! Id dolorum magni delectus doloremque sequi corrupti, in repellat ut laborum earum eligendi odit maiores, minus pariatur voluptatibus rem.
+            </div>
+        </div>
+    </div>
+    <div class="myContainer">
+        I am another container
+    </div>
+</body>
+</html>
