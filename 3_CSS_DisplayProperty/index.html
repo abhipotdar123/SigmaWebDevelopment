@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Display Properties Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .example-container {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .code-snippet {
+      background: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    .block-example {
+      display: block;
+      background: lightblue;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .inline-example {
+      display: inline;
+      background: yellow;
+      padding: 5px;
+      margin-right: 5px;
+    }
+
+    .inline-block-example {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      background: pink;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .hidden-example {
+      display: none;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      background: lightgray;
+      padding: 10px;
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+    }
+
+    .flex-item.red {
+      background: red;
+    }
+
+    .flex-item.blue {
+      background: blue;
+    }
+
+    .flex-item.green {
+      background: green;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: lightyellow;
+      padding: 10px;
+    }
+
+    .grid-item {
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+    }
+
+    .grid-item.purple {
+      background: purple;
+    }
+
+    .grid-item.cyan {
+      background: cyan;
+    }
+
+    .grid-item.magenta {
+      background: magenta;
+    }
+
+    .table-container {
+      display: table;
+      border: 1px solid black;
+    }
+
+    .table-row {
+      display: table-row;
+    }
+
+    .table-cell {
+      display: table-cell;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    .inline-flex-container {
+      display: inline-flex;
+      gap: 10px;
+      background: lightblue;
+      padding: 10px;
+    }
+
+    .inline-flex-item {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .inline-flex-item.gold {
+      background: gold;
+    }
+
+    .inline-flex-item.silver {
+      background: silver;
+    }
+
+    .inline-grid-container {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      gap: 5px;
+      background: lavender;
+      padding: 10px;
+    }
+
+    .inline-grid-item {
+      padding: 10px;
+    }
+
+    .inline-grid-item.orange {
+      background: orange;
+    }
+
+    .inline-grid-item.teal {
+      background: teal;
+    }
+
+    .contents-container {
+      display: contents;
+    }
+
+    .contents-item {
+      background: pink;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Display Properties Examples</h1>
+
+  <!-- Block -->
+  <div class="section">
+    <div class="section-title">display: block</div>
+    <div class="example-container">
+      <div class="block-example">Block Element 1</div>
+      <div class="block-example">Block Element 2</div>
+    </div>
+
+    <pre class="code-snippet">
+<code>&lt;div class="block-example"&gt;Block Element 1&lt;/div&gt;
+&lt;div class="block-example"&gt;Block Element 2&lt;/div&gt;
+
+.block-example {
+  display: block;
+  background: lightblue;
+  margin-bottom: 10px;
+  padding: 10px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Element takes up the full width available (its container).</li>
+      <li>Causes a line break before and after the element.</li>
+      <li>Used for block-level elements like &lt;div&gt;, &lt;p&gt; etc.</li>
+    </ul>
+  </div>
+
+  <!-- Inline -->
+  <div class="section">
+    <div class="section-title">display: inline</div>
+    <div class="example-container">
+      <span class="inline-example">Inline 1</span>
+      <span class="inline-example">Inline 2</span>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;span class="inline-example"&gt;Inline 1&lt;/span&gt;
+&lt;span class="inline-example"&gt;Inline 2&lt;/span&gt;
+
+.inline-example {
+  display: inline;
+  background: yellow;
+  padding: 5px;
+  margin-right: 5px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Element only takes up as much width as necessary.</li>
+      <li>Does not cause a line break.</li>
+      <li>Elements sit next to each other on the same line.</li>
+    </ul>
+  </div>
+
+  <!-- Inline-Block -->
+  <div class="section">
+    <div class="section-title">display: inline-block</div>
+    <div class="example-container">
+      <div class="inline-block-example">Box 1</div>
+      <div class="inline-block-example">Box 2</div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="inline-block-example"&gt;Box 1&lt;/div&gt;
+&lt;div class="inline-block-example"&gt;Box 2&lt;/div&gt;
+
+.inline-block-example {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: pink;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 50px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Similar to inline but allows setting width and height.</li>
+      <li>Elements appear on the same line but can have dimensions.</li>
+      <li>Useful for layouts like buttons, cards, etc.</li>
+    </ul>
+  </div>
+
+  <!-- Flex -->
+  <div class="section">
+    <div class="section-title">display: flex</div>
+    <div class="example-container">
+      <div class="flex-container">
+        <div class="flex-item red">Flex 1</div>
+        <div class="flex-item blue">Flex 2</div>
+        <div class="flex-item green">Flex 3</div>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="flex-container"&gt;
+  &lt;div class="flex-item red"&gt;Flex 1&lt;/div&gt;
+  &lt;div class="flex-item blue"&gt;Flex 2&lt;/div&gt;
+  &lt;div class="flex-item green"&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  background: lightgray;
+  padding: 10px;
+}
+
+.flex-item {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Creates a flexible container for its items.</li>
+      <li>Items can be aligned using properties like justify-content and align-items.</li>
+      <li>Great for layouts that require flexible positioning of items.</li>
+    </ul>
+  </div>
+
+  <!-- Grid -->
+  <div class="section">
+    <div class="section-title">display: grid</div>
+    <div class="example-container">
+      <div class="grid-container">
+        <div class="grid-item purple">Grid 1</div>
+        <div class="grid-item cyan">Grid 2</div>
+        <div class="grid-item magenta">Grid 3</div>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-item purple"&gt;Grid 1&lt;/div&gt;
+  &lt;div class="grid-item cyan"&gt;Grid 2&lt;/div&gt;
+  &lt;div class="grid-item magenta"&gt;Grid 3&lt;/div&gt;
+&lt;/div&gt;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: lightyellow;
+  padding: 10px;
+}
+
+.grid-item {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Creates a grid layout with rows and columns.</li>
+      <li>Define grid structure using grid-template-columns and grid-template-rows.</li>
+      <li>Items can span multiple rows or columns using grid-row and grid-column.</li>
+      <li>Best for precise 2D layouts.</li>
+    </ul>
+  </div>
+
+  <!-- Table -->
+  <div class="section">
+    <div class="section-title">display: table</div>
+    <div class="example-container">
+      <div class="table-container">
+        <div class="table-row">
+          <div class="table-cell">Cell 1</div>
+          <div class="table-cell">Cell 2</div>
+        </div>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="table-container"&gt;
+  &lt;div class="table-row"&gt;
+    &lt;div class="table-cell"&gt;Cell 1&lt;/div&gt;
+    &lt;div class="table-cell"&gt;Cell 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+.table-container {
+  display: table;
+  border: 1px solid black;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 10px;
+  border: 1px solid black;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Mimics the behavior of HTML <table> elements.</li>
+      <li>Use table-row for rows and table-cell for individual cells.</li>
+      <li>Great for tabular data without semantic HTML.</li>
+    </ul>
+  </div>
+
+  <!-- Inline-Flex -->
+  <div class="section">
+    <div class="section-title">display: inline-flex</div>
+    <div class="example-container">
+      <div class="inline-flex-container">
+        <div class="inline-flex-item gold">1</div>
+        <div class="inline-flex-item silver">2</div>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="inline-flex-container"&gt;
+  &lt;div class="inline-flex-item gold"&gt;1&lt;/div&gt;
+  &lt;div class="inline-flex-item silver"&gt;2&lt;/div&gt;
+&lt;/div&gt;
+
+.inline-flex-container {
+  display: inline-flex;
+  gap: 10px;
+  background: lightblue;
+  padding: 10px;
+}
+
+.inline-flex-item {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Creates a flexible box container that behaves like an inline element.</li>
+      <li>Use justify-content and align-items to align child elements.</li>
+      <li>Supports gap for spacing between items.</li>
+    </ul>
+  </div>
+
+  <!-- Inline-Grid -->
+  <div class="section">
+    <div class="section-title">display: inline-grid</div>
+    <div class="example-container">
+      <div class="inline-grid-container">
+        <div class="inline-grid-item orange">A</div>
+        <div class="inline-grid-item teal">B</div>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="inline-grid-container"&gt;
+  &lt;div class="inline-grid-item orange"&gt;A&lt;/div&gt;
+  &lt;div class="inline-grid-item teal"&gt;B&lt;/div&gt;
+&lt;/div&gt;
+
+.inline-grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  background: lavender;
+  padding: 10px;
+}
+
+.inline-grid-item {
+  padding: 10px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Works like grid but remains inline within its parent.</li>
+      <li>Aligns items using grid properties like grid-template-columns.</li>
+      <li>Useful for small grid layouts that need to remain inline.</li>
+    </ul>
+  </div>
+
+  <!-- Contents -->
+  <div class="section">
+    <div class="section-title">display: contents</div>
+    <div class="example-container">
+      <div class="contents-container">
+        <p class="contents-item">Child 1</p>
+        <p class="contents-item">Child 2</p>
+      </div>
+    </div>
+    <pre class="code-snippet">
+<code>&lt;div class="contents-container"&gt;
+  &lt;p class="contents-item"&gt;Child 1&lt;/p&gt;
+  &lt;p class="contents-item"&gt;Child 2&lt;/p&gt;
+&lt;/div&gt;
+
+.contents-container {
+  display: contents;
+}
+
+.contents-item {
+  background: pink;
+  padding: 5px;
+}</code>
+    </pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Makes the container itself disappear but keeps its children visible and part of the parent’s layout.</li>
+      <li>No visual box is generated for the container.</li>
+      <li>Only the child elements are rendered as if they are direct children of the parent element.</li>
+      <li>Not all elements support display: contents (e.g., &lt;table&gt;).</li>
+    </ul>
+  </div>
+</body>
+
+</html>
