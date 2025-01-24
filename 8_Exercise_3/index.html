@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise_3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: rgb(220, 234, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            padding: 20px;
+            width: 450px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card img:hover {
+            transform: scale(1.01);
+        }
+        .capsule-label {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .capsule-label li {
+            font-size: 12px;
+            list-style: none;
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: rgb(107, 104, 104);
+            border: 1px solid rgb(107, 104, 104);
+        }
+        .capsule-label li:hover{
+            transform: scale(1.07);
+        }
+        .heading {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: rgb(107, 104, 104);
+        }
+        p {
+            margin-top: 10px;
+            color: rgb(107, 104, 104);
+        }
+        .read-more-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #e2f6fd;
+            color: #2b698f;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .read-more-btn:hover {
+            background-color: #add8e6;
+        }
+    </style>
+</head>
+<body>
+    <article class="card">
+        <img src="Nature.jpg" alt="Nature with Lake">
+        <ul class="capsule-label">
+            <li>Nature</li>
+            <li>Lake</li>
+        </ul>
+        <h1 class="heading">Logo di Braies</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius repudiandae quod doloribus accusantium dolore. Delectus amet, suscipit rem eius excepturi nesciunt reiciendis. Quo dicta possimus, tempore suscipit aperiam magni necessitatibus enim quisquam atque quod, rem recusandae, vitae perspiciatis fuga. Quibusdam.
+        </p>
+        <button class="read-more-btn">Read More</button>
+    </article>
+</body>
+</html>

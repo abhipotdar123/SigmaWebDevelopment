@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 14px;
+        }
+
+        .static {
+            background-color: #3498db;
+            position: static;
+        }
+
+        .relative {
+            background-color: #e74c3c;
+            position: relative;
+            top: 10px;
+            left: 20px;
+        }
+
+        .absolute {
+            background-color: #2ecc71;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .fixed {
+            background-color: #9b59b6;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .sticky {
+            background-color: #f1c40f;
+            position: -webkit-sticky;
+            /* For Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Understanding CSS Position Property</h1>
+        <p>The CSS <strong>position</strong> property specifies how an element is positioned in the document. Here are
+            the common values:</p>
+
+        <h2>1. static (Default)</h2>
+        <p>Elements are positioned according to the normal flow of the document. No special positioning applied.</p>
+        <div class="box static">Static</div>
+        <pre><code>.static {
+  background-color: #3498db;
+  position: static;
+}</code></pre>
+
+        <h2>2. relative</h2>
+        <p>The element is positioned relative to its normal position. You can use <code>top</code>, <code>right</code>,
+            <code>bottom</code>, and <code>left</code> to offset it.</p>
+        <div class="box relative">Relative</div>
+        <pre><code>.relative {
+  background-color: #e74c3c;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}</code></pre>
+
+        <h2>3. absolute</h2>
+        <p>The element is positioned relative to its nearest positioned ancestor (other than <code>static</code>). If no
+            such ancestor exists, it is positioned relative to the <code>html</code> element.</p>
+        <div class="box absolute">Absolute</div>
+        <pre><code>.absolute {
+  background-color: #2ecc71;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}</code></pre>
+
+        <h2>4. fixed</h2>
+        <p>The element is positioned relative to the viewport and does not move when the page is scrolled.</p>
+        <div class="box fixed">Fixed</div>
+        <pre><code>.fixed {
+  background-color: #9b59b6;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}</code></pre>
+
+        <h2>5. sticky</h2>
+        <p>The element toggles between <code>relative</code> and <code>fixed</code> depending on the scroll position. It
+            remains <code>relative</code> until it crosses a defined threshold (<code>top</code>, <code>left</code>,
+            etc.).</p>
+        <div class="box sticky">Sticky</div>
+        <pre><code>.sticky {
+  background-color: #f1c40f;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+}</code></pre>
+    </div>
+</body>
+
+</html>

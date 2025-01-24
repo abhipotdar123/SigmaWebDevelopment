@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multicolor Website Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+    <style>
+        :root {
+            --primary-color: orange;
+            --text-color: white;
+            --secondary-color: #a87d2fd5;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 20px;
+            font-weight: 400;
+        }
+
+        ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .theme-selector-container {
+            display: flex;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .theme-selector-container div {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        .regular-theme {
+            background-color: orange;
+        }
+
+        .maroon-theme {
+            background-color: maroon;
+        }
+
+        .cadetblue-theme {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About Me</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+            <div class="theme-selector-container">
+                <div class="regular-theme" onclick="applyTheme('normal')"></div>
+                <div class="maroon-theme" onclick="applyTheme('maroon')"></div>
+                <div class="cadetblue-theme" onclick="applyTheme('cadetblue')"></div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function applyTheme(theme) {
+            const root = document.documentElement.style;
+            if (theme === 'normal') {
+                root.setProperty('--primary-color', 'orange');
+                root.setProperty('--secondary-color', '#a87d2fd5');
+                root.setProperty('--text-color', 'white');
+                document.body.style.backgroundColor = '#a87d2fd5';
+            } else if (theme === 'maroon') {
+                root.setProperty('--primary-color', 'maroon');
+                root.setProperty('--secondary-color', '#fae3e3');
+                root.setProperty('--text-color', 'white');
+                document.body.style.backgroundColor = '#fae3e3';
+            } else if (theme === 'cadetblue') {
+                root.setProperty('--primary-color', 'cadetblue');
+                root.setProperty('--secondary-color', '#e0f5f5');
+                root.setProperty('--text-color', 'white');
+                document.body.style.backgroundColor = '#e0f5f5';
+            }
+        }
+    </script>
+</body>
+
+</html>
