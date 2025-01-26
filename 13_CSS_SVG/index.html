@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style the logo container */
+        .logo {
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: 0.5s;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+        }
+
+        /* Style the SVG container */
+        .logo svg {
+            width: 50px;
+            height: 50px;
+            transition: transform 1s ease;
+        }
+
+        /* Styling for stroke in the path */
+        .logo path {
+            stroke: #1d1d42;
+            stroke-width: 5;
+        }
+
+        /* Apply background gradient shift on hover */
+        .logo:hover {
+            background-position: right center; /* Shift background on hover */
+        }
+
+        /* Define gradient for SVG and change on hover */
+        .logo path {
+            fill: url(#gradient1);  /* Default gradient */
+            transition: fill 2s ease; /* Smooth transition for gradient fill */
+        }
+
+        /* Hover gradient for the SVG */
+        .logo:hover path {
+            fill: url(#gradient2);  /* Hover gradient */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <!-- SVG with gradient fill -->
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define gradients -->
+            <defs>
+                <!-- Default gradient -->
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2b5876;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4e4376;stop-opacity:1" />
+                </linearGradient>
+
+                <!-- Hover gradient -->
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4e4376;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#2b5876;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Path that will use the gradient fill -->
+            <path
+                d="M174 46a243 243 0 0186-15c30 0 59 5 86 15a50 50 0 0189 47c12 10 20 43 25 97 4 30 30 121 30 140 1 80-76 136-230 170-153-33-230-90-230-170 1-20 25-109 30-140 6-53 15-85 26-96a50 50 0 0188-48zm36 181a40 40 0 00-28 41l4 62a74.5 74.5 0 00148.7 0l4-61a40 40 0 00-28-41 182 182 0 00-53-8c-17 0-32 2-47 7zm150 3c17 0 30-18 30-40s-13-40-30-40-30 18-30 40 13 40 30 40zm-200 0c17 0 30-18 30-40s-13-40-30-40-30 18-30 40 13 40 30 40zm131 47a41 41 0 01-64 0c-17-20-3-37 32-37s49 17 32 37z"
+                fill="url(#gradient1)"  <!-- Default gradient fill -->
+            />
+        </svg>
+    </div>
+</body>
+</html>
