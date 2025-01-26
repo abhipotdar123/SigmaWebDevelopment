@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Responsive</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+
+        main {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px 250px 150px auto;
+            grid-template-areas:
+            "header header header"
+            "fYellow fGreen fRed"
+            "signup signup signup"
+            "content content content"
+            ;
+        }
+
+        .section {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            background-color: darkcyan;
+            grid-area: header;
+        }
+
+        .feature-yellow {
+            background-color: #ffd104;
+            grid-area: fYellow;
+        }
+
+        .feature-red {
+            background-color: #f86f6f;
+            grid-area: fRed;
+        }
+
+        .feature-green{
+            background-color: darkgreen;
+            grid-area: fGreen;
+        }
+
+        .sign-up {
+            background-color: lightblue;
+            grid-area: signup;
+        }
+
+        .content {
+            background-color: lightsalmon;
+            grid-area: content;
+        }
+
+        @media screen and (max-width: 1023px) {
+            main{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 100px auto 150px 150px;
+                grid-template-areas:
+                " header header "
+                "content content"
+                "signup fYellow"
+                "fRed fGreen"
+                ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="section header">header</div>
+        <div class="section feature-yellow">feature-yellow</div>
+        <div class="section feature-red">feature-red</div>
+        <div class="section feature-green">feature-green</div>
+        <div class="section sign-up">sign-up</div>
+        <div class="section content">content</div>
+    </main>
+</body>
+
+</html>
